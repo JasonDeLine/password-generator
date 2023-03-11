@@ -11,14 +11,23 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
 // Variable declarations
 var askLength = "";
+var confirmSpecial;
+var confirmLower;
+var confirmUpper;
 
 // Prompt for password length
-function generatePW() {
+function generatePassword() {
   var askLength = (prompt("How many characters do you want in your password?"));
-
-}
-
 // If password length falls outside parameters, loop back to length prompt
+  while(askLength <= 7 || askLength >= 129)
+    alert("Your password must be between 8 and 128 characters. Please try again.")
+    var askLength = (prompt("How many characters do you want in your password?"))
+  
+}
+  // Length confirmation message
+    alert('Your password will have ${askLength} characters');
+
+
 
 
 
