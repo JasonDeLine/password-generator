@@ -5,13 +5,18 @@ document.querySelector("#generate").addEventListener("click", writePassword);
 
 // arrays
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialCharacter = [];
-var lowercase [];
-var uppercase [];
+var specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "?"];
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
 // Variable declarations
+var askLength = "";
 
 // Prompt for password length
+function generatePW() {
+  var askLength = (prompt("How many characters do you want in your password?"));
+
+}
 
 // If password length falls outside parameters, loop back to length prompt
 
