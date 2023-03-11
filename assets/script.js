@@ -26,7 +26,15 @@ function generatePassword() {
     }
   // Length confirmation message
     alert("Your password will have " + askLength + " characters");
+  
+    // Criteria selection prompts
+    var confirmSpecial = confirm("Click OK if you would like special characters in your password. Otherwise click cancel.");
+    var confirmLower = confirm("Click OK if you would like lowercase letters in your password. Otherwise click cancel.");
+    var confirmUpper = confirm("Click OK if you would like uppercase letters in your password. Otherwise click cancel.");
   }
+
+  
+
 
 
 
