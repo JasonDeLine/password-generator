@@ -6,8 +6,8 @@ document.querySelector("#generate").addEventListener("click", writePassword);
 // arrays
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "?"];
-var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
-var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Variable declarations
 var askLength = "";
@@ -36,17 +36,41 @@ function generatePassword() {
     // loops if answers are outside password requirements
     while(confirmUpper === false && confirmLower === false && confirmSpecial === false && confirmNumeric === false) {
       alert("You must choose at least one parameter");
-        var confirmSpecial = confirm("Click OK to confirm if you would like to include special characters");
-        var confirmNumeric = confirm("Click OK to confirm if you would like to include numeric characters");    
-        var confirmLower = confirm("Click OK to confirm if you would like to include lowercase characters");
-        var confirmUpper = confirm("Click OK to confirm if you would like to include uppercase characters");
+      var confirmSpecial = confirm("Click OK if you would like special characters in your password. Otherwise click cancel.");
+      var confirmNumeric = confirm("Click OK if you would like numeric characters in your password. Otherwise click cancel.")
+      var confirmLower = confirm("Click OK if you would like lowercase letters in your password. Otherwise click cancel.");
+      var confirmUpper = confirm("Click OK if you would like uppercase letters in your password. Otherwise click cancel.");
   }
 
-  
+  var passwordCharacters = []
+      
+    if (confirmSpecial) {
+      passwordCharacters = passwordCharacters.concat(specialCharacter)
+    }
 
+    if (confirmNumeric) {
+      passwordCharacters = passwordCharacters.concat(number)
+    }
+      
+    if (confirmLower) {
+      passwordCharacters = passwordCharacters.concat(lowercase)
+    }
 
+    if (confirmUpper) {
+      passwordCharacters = passwordCharacters.concat(uppercase)
+    }
 
+      console.log(passwordCharacters)
 
+      // Empty string to be filled based on for loop selecting random characters from the array
+      var randomPassword = ""
+      
+      for (var i = 0; i < askLength; i++) {
+        randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+        console.log(randomPassword)
+      }
+      return randomPassword;
+} 
 
 // Write password to the #password input
 function writePassword() {
@@ -57,5 +81,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
