@@ -14,6 +14,7 @@ var askLength = "";
 var confirmSpecial;
 var confirmLower;
 var confirmUpper;
+var confirmNumeric;
 
 // Prompt for password length
 function generatePassword() {
@@ -29,8 +30,16 @@ function generatePassword() {
   
     // Criteria selection prompts
     var confirmSpecial = confirm("Click OK if you would like special characters in your password. Otherwise click cancel.");
+    var confirmNumeric = confirm("Click OK if you would like numeric characters in your password. Otherwise click cancel.")
     var confirmLower = confirm("Click OK if you would like lowercase letters in your password. Otherwise click cancel.");
     var confirmUpper = confirm("Click OK if you would like uppercase letters in your password. Otherwise click cancel.");
+    // loops if answers are outside password requirements
+    while(confirmUpper === false && confirmLower === false && confirmSpecial === false && confirmNumeric === false) {
+      alert("You must choose at least one parameter");
+      var confirmSpecial = confirm("Click OK to confirm if you would like to include special characters");
+        var confirmNumeric = confirm("Click OK to confirm if you would like to include numeric characters");    
+        var confirmLower = confirm("Click OK to confirm if you would like to include lowercase characters");
+        var confirmUpper = confirm("Click OK to confirm if you would like to include uppercase characters");
   }
 
   
