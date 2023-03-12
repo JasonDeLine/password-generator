@@ -1,26 +1,7 @@
 PASSWORD GENERATOR
-Description: When a clicks the "generate password" button the user is prompted to enter a password length, then prompted to select from predetermined criteria. After completing all prompts, a randomly generated password is displayed in the password box. If a user does not enter a password length between 8-128 characters, the user is prompted to enter a valid length. If a user does not select any of the predetermined password criteria, they are prompted that they must select at least one criteria, then asked to select from the prompts again. When the user has successfully selected all prompts and the criteria are defined, then the password will generate and display in the password box. 
+Description: When a user clicks the "generate password" button the user is prompted to enter a password length, then prompted to select from predetermined criteria. After completing all prompts, a randomly generated password is displayed in the password box. If a user does not enter a password length between 8-128 characters, the user is prompted to enter a valid length. If a user does not select any of the predetermined password criteria, they are prompted that they must select at least one criteria, then asked to select from the prompts again. When the user has successfully met all requirements and the criteria are defined, then the password will generate and display in the password box. 
 
 Code used: HTML, CSS, JavaScript
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 03 JavaScript: Password Generator
 

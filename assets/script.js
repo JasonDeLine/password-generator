@@ -42,6 +42,7 @@ function generatePassword() {
       var confirmUpper = confirm("Click OK if you would like uppercase letters in your password. Otherwise click cancel.");
   }
 
+  // assigning action to password criteria selections
   var passwordCharacters = []
       
     if (confirmSpecial) {
@@ -62,7 +63,7 @@ function generatePassword() {
 
       console.log(passwordCharacters)
 
-      // Empty string to be filled based on for loop selecting random characters from the array
+      // empty string will populate with criteria selections
       var randomPassword = ""
       
       for (var i = 0; i < askLength; i++) {
